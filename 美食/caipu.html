@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheetcopy.css">
+  <link rel="stylesheet" href="./js/swiper.min.css">
+  <title>菜谱大全</title>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 460px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .imgimg {
+      width: 300px;
+      height: 200px;
+    }
+
+    /* 最新推荐 */
+    /* h1 {
+      margin-bottom: 20px;
+  } */
+
+    /* 使用 Flexbox 布局使菜品卡片排列整齐 */
+    .classList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 60px;
+      /* width:200px;
+    height: 200px; */
+    }
+
+    .list {
+      width: 200px;
+      /* 设置卡片宽度 */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: background-color 0.3s;
+      /* 背景颜色过渡效果 */
+    }
+
+    .list img {
+      width: 100%;
+      height: auto;
+      transition: linear 0.3s;
+      /* 背景颜色过渡效果 */
+    }
+
+    .list img:hover {
+      transform: scale(1.1);
+    }
+
+    .list h4 {
+      margin: 10px;
+      /* padding-bottom: 10px; */
+    }
+
+    .foodList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .list-food {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+    }
+
+    .list-food img {
+      width: 100%;
+      height: auto;
+    }
+
+    .list-food img:hover {
+      transform: scale(1.1);
+    }
+
+    .list-food h4 {
+      margin: 10px;
+    }
+
+    /* 尾部 */
+    footer {
+      background-color: white;
+      color: black;
+      border-top: 1px solid #555;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      /* border-top: 1px solid #555; */
+      padding-top: 50px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 头部区域 ——李一佳-->
+  <header>
+    <h1>菜谱大全</h1>
+  </header>
+  <nav class="navbar">
+    <div class="logo">
+      <img style="width: 70px; height: 70px;" src="./图片/汉堡.jpg" alt="菜谱图标">
+      <span>美味菜谱</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="setActive(this)">中式菜谱</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">西式菜谱</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">烘培甜点</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">健康饮食</a></li>
+    </ul>
+  </nav>
+
+  <!-- 美味菜谱 ——李一佳-->
+  <div class="container">
+    <h1>美味菜谱</h1>
+    <ul class="recipe-list">
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/糖醋排骨.jpg" alt="菜谱图片 1">
+        <h2>糖醋排骨</h2>
+        <p>食材： 排骨 、冰糖 、醋 、生抽</p>
+        <p>难度系数：⭐⭐⭐⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/宫保鸡丁.jpg" alt="菜谱图片 2">
+        <h2>宫保鸡丁</h2>
+        <p>食材：鸡肉、炸花生米、干辣椒、花椒</p>
+        <p>难度系数：⭐⭐⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/油炸鲜虾.jpg" alt="菜谱图片 3">
+        <h2>油炸鲜虾</h2>
+        <p>食材：鲜虾、鸡蛋、面粉、淀粉、油等</p>
+        <p>难度系数：⭐⭐⭐</p>
+      </li>
+    </ul>
+    <ul class="recipe-list">
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/番茄炒蛋.jpg" alt="菜谱图片 1">
+        <h2>番茄炒蛋</h2>
+        <p>食材：番茄、鸡蛋、葱花、糖、油、盐</p>
+        <p>难度系数：⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/小龙虾.jpg" alt="菜谱图片 2">
+        <h2>小龙虾</h2>
+        <p>食材：小龙虾、葱、姜、蒜、豆瓣酱等</p>
+        <p>难度系数：⭐⭐⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/驴肉火烧.jpg" alt="菜谱图片 3">
+        <h2>驴肉火烧</h2>
+        <p>食材：驴肉、火烧皮、酱油等</p>
+        <p>难度系数：⭐⭐⭐⭐</p>
+      </li>
+    </ul>
+    <ul class="recipe-list">
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/番茄肉酱虾仁意面.jpg" alt="菜谱图片 1">
+        <h2>番茄肉酱虾仁意面</h2>
+        <p>食材：番茄、意大利面、虾仁、肉酱</p>
+        <p>难度系数：⭐⭐⭐⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/焦糖可可蛋糕.jpg" alt="菜谱图片 2">
+        <h2>焦糖可可蛋糕</h2>
+        <p>食材：低筋面粉、可可粉、鸡蛋、糖等</p>
+        <p>难度系数：⭐⭐⭐⭐⭐</p>
+      </li>
+      <li class="recipe-item">
+        <img class="imgimg" src="./图片/小米南瓜粥.jpg" alt="菜谱图片 3">
+        <h2>小米南瓜粥</h2>
+        <p>食材：小米、南瓜</p>
+        <p>难度系数：⭐⭐</p>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- 其他推荐，常用家常菜———王润姿 -->
+  <div class="middder">
+    <div>
+      <h1>其他推荐</h1>
+      <div class="classList">
+        <div class="list">
+          <img src="./图片/可乐鸡翅.png" alt="可乐鸡翅">
+          <h4 style="background-color: white;">可乐鸡翅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/土豆炒肉丝.png" alt="土豆炒肉丝">
+          <h4>土豆炒肉丝</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/金针菇蒸猪肉卷.png" alt="金针菇蒸猪肉卷">
+          <h4>金针菇蒸猪肉卷</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊排暖锅.png" alt="羊排暖锅">
+          <h4>羊排暖锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/莲藕玉米排骨汤.png" alt="莲藕玉米排骨汤">
+          <h4>莲藕玉米排骨汤</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/番茄牛腩.png" alt="番茄牛腩">
+          <h4>番茄牛腩</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊肉炖萝卜.png" alt="羊肉炖萝卜">
+          <h4>羊肉炖萝卜</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊肉粉丝煲.png" alt="羊肉粉丝煲">
+          <h4>羊肉粉丝煲</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/麻辣香锅.png" alt="麻辣香锅">
+          <h4>麻辣香锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/彩椒炒猪肝.png" alt="彩椒炒猪肝">
+          <h4>彩椒炒猪肝</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/炒辣子鸡.png" alt="炒辣子鸡">
+          <h4>炒辣子鸡</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/糖醋猪脚姜.png" alt="糖醋猪脚姜">
+          <h4>糖醋猪脚姜</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/牛肉炖萝卜.png" alt="牛肉炖萝卜">
+          <h4>牛肉炖萝卜</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/牛肉暖锅.png" alt="牛肉暖锅">
+          <h4>牛肉暖锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/麻辣香锅.png" alt="鲜虾煲">
+          <h4>鲜虾煲</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- 空的区域，防止被图片覆盖——王润姿 -->
+    <div style="height: 30px;"></div>
+    <!-- 尾部——王润姿  -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>关于我们</h3>
+          <p>我们是一个专注于美食的平台，致力于为用户提供丰富多样且独具匠心的美食体验。</p>
+        </div>
+        <div class="footer-section links">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">产品</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>联系我们</h3>
+          <p>地址：[三亚学院盛宝金融科技商学院]<br>
+            电话：[12345678901]<br>
+            邮箱：[12345678901@qq.com]
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 [美食大全]. 版权所有。</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

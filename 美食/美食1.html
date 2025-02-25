@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheet.css">
+  <link rel="stylesheet" href="./js/swiper.min.css">
+  <title>美食世界</title>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 460px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .middder {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .zhushijingxuan {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 头部区域 ——惠星宇-->
+  <header>
+    <h1>欢迎来到美食的奇妙世界</h1>
+    <p>您将在盛宝金融科技商学院美食城开启一场美食之旅</p>
+  </header>
+  <!-- 菜单导航区域 ——袁冶   导航栏跳转——李睿 -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./图片/7482945896bdcf34e1c2f42b3785cde.png" alt="美食世界">
+      <span>美食世界</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">首页</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">菜谱 <span class="arrow-down">&#9660;</span></a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="https://home.meishichina.com/recipe/jiachang/" >家常菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/recai/" >热菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/liangcai/" >凉菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/zhushi/" >主食</a></li>
+            <li><a href="https://home.meishichina.com/recipe/zhou/" >粥</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">中国味道 <span class="arrow-down">&#9660;</span></a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="./川菜.html"  target="_blank">川菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/yuecai/" >粤菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/dongbeicai/" >东北菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/xiangcai/" >湘菜</a></li>
+            <li><a href="https://home.meishichina.com/recipe/huicai/" >徽菜</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">饮食健康 <span class="arrow-down">&#9660;</span></a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="https://home.meishichina.com/recipe/jiankangshipu" >营养搭配</a></li>
+            <li><a href="http://zhongyibaodian.com/bcgm/yinshijinji.html" >饮食禁忌</a></li>
+            <li><a href="https://home.meishichina.com/recipe/jiankangshipu/" >健康食谱</a></li>
+            <li><a href="https://home.meishichina.com/recipe/shoushen/" >减肥饮食</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="搜索菜谱、菜单、食材、用户">
+      <button><img src="./图片/4eb062a5a8dd1b0de63e8a3e959bc6f.png" alt="搜索"></button>
+    </div>
+    <div class="user-actions">
+      <!-- HTML 部分 -->
+      <button type="submit" class="clickable-btn">发布</button>
+      <button onclick="location.href='/login'" class="clickable-btn">登录/注册</button>
+    </div>
+  </nav>
+
+  <!-- 内容区域 -->
+  <!-- 左侧导航栏和图片轮播——郭瑾涵（主要）、李一佳 -->
+  <div class="main-container">
+    <div class="box">
+      <div class="box1">
+        <div class="pic">
+          <img style="width: 70px; height: 70px;" src="./图片/1.png" alt="菜谱大全图标">
+          <a style="margin-left: 10px;" href="./caipu.html" target="_blank">菜谱大全</a>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="pic">
+          <img style="width: 70px; height: 70px;" src="./图片/2.png" alt="家常菜图标">
+          <a style="margin-left: 10px;" href="./shicai.html" target="_blank">食材大全</a>
+        </div>
+      </div>
+      <div class="box3">
+        <div class="pic">
+          <img style="width: 70px; height: 70px;" src="./图片/3.png" alt="健康饮食图标">
+          <a style="margin-left: 10px;" href="https://www.meishichina.com/mofang/">专题专区</a>
+        </div>
+      </div>
+      <div class="box4">
+        <div class="pic">
+          <img style="width: 70px; height: 70px;" src="./图片/4.png" alt="母婴专区图标">
+          <a style="margin-left: 10px;" href="https://baike.pcbaby.com.cn/recipe/">母婴专区</a>
+        </div>
+      </div>
+      <div class="box5">
+        <div class="pic">
+          <img style="width: 70px; height: 70px;" src="./图片/5.png" alt="早餐食谱图标">
+          <a style="margin-left: 10px;" href="https://www.douguo.com/caipu/%E6%97%A9%E9%A4%90">早餐食谱</a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./图片/沙拉e.jpg" alt="11"></div>
+        <div class="swiper-slide"><img src="./图片/黄焖鸡z2.jpg" alt="22"></div>
+        <div class="swiper-slide"><img src="./图片/鸡爪煲.jpg" alt="33"></div>
+        <div class="swiper-slide"><img src="./图片/沙拉q.jpg" alt="44"></div>
+        <div class="swiper-slide"><img src="./图片/沙拉w.jpg" alt="55"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script src="./js/swiper.min.js"></script>
+  <script>
+    window.onload = function () {
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 2000,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        grabCursor: true,
+        effect: "coverflow",
+        centeredSlides: true,
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 80,
+          modifier: 1,
+          slideShadows: true,
+        },
+      });
+    };
+  </script>
+  <!-- 空的区域，防止被图片覆盖——王润姿 -->
+  <div style="height: 20px;"></div>
+  <!-- 特色美食和菜谱区域——王润姿，李睿 -->
+  <div class="recipe-list">
+    <div class="recipe-card">
+      <p>今日推荐指数--五颗星</p>
+      <img src="./图片/19361376_144045227000_2.jpg" alt="菜谱 1 图片">
+      <h3>花菇鸡饭</h3>
+      <button onclick="addToCart(1, '花菇鸡饭', 25, './图片/19361376_144045227000_2.jpg')">加入购物车</button>
+    </div>
+
+    <div class="recipe-card">
+      <p>今日推荐指数--四颗星</p>
+      <img src="./图片/v2-0390e813381771812a9ba5a706c3d137_r.jpg" alt="菜谱 2 图片">
+      <h3>兰州拉面</h3>
+      <button onclick="addToCart(2, '兰州拉面', 18, './图片/v2-0390e813381771812a9ba5a706c3d137_r.jpg')">加入购物车</button>
+    </div>
+
+    <div class="recipe-card">
+      <p>今日推荐指数--三颗星</p>
+      <img src="./图片/OIP-C (1).jpg" alt="菜谱 3 图片">
+      <h3>北京烤鸭</h3>
+      <button onclick="addToCart(3, '北京烤鸭', 35, './图片/OIP-C (1).jpg')">加入购物车</button>
+    </div>
+
+    <div class="recipe-card">
+      <p>今日推荐指数--三颗星</p>
+      <img src="./图片/沙拉e.jpg" alt="菜谱 4 图片">
+      <h3>水煮鱼</h3>
+      <button onclick="addToCart(4, '水煮鱼', 25, './图片/沙拉e.jpg')">加入购物车</button>
+    </div>
+
+    <div class="recipe-card">
+      <p>今日推荐指数--三颗星</p>
+      <img src="./图片/鸡爪煲.jpg" alt="菜谱 2 图片">
+      <h3>鸡爪煲</h3>
+      <button onclick="addToCart(6, '鸡爪煲', 25, './图片/鸡爪煲.jpg')">加入购物车</button>
+    </div>
+
+    <div class="cart">
+      <p class="gouwuche">购物车</p>
+      <div id="cart-items">
+        <!-- 购物车商品项将动态添加在此处 -->
+      </div>
+      <div class="cart-total">
+        Total: $<span id="total-amount">0</span>
+      </div>
+      <button style="margin-left: 80px;" onclick="checkout()">结算</button>
+    </div>
+  </div>
+
+  <!-- 购物车区域——王润姿 -->
+  <script>
+    // 模拟商品数据
+    const products = [
+      { id: 1, name: '花菇鸡饭', price: 25, image: './图片/19361376_144045227000_2.jpg' },
+      { id: 2, name: '兰州拉面', price: 18, image: './图片/v2-0390e813381771812a9ba5a706c3d137_r.jpg' },
+      { id: 3, name: '北京烤鸭', price: 35, image: './图片/OIP-C (1).jpg' },
+      { id: 4, name: '水煮鱼', price: 45, image: '../图片/沙拉e.jpg' },
+      { id: 4, name: '黄焖鸡', price: 25, image: '../图片/黄焖鸡z2.jpg' },
+    ];
+
+    // 用于存储购物车中的商品
+    let cart = [];
+
+    // 渲染购物车商品项
+    function renderCartItems() {
+      const cartItemsDiv = document.getElementById('cart-items');
+      cartItemsDiv.innerHTML = '';
+      cart.forEach(item => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart-item');
+        cartItemDiv.innerHTML = `
+              <img src="${item.image}" alt="${item.name}">
+              <span>${item.name} - $${item.price}</span>
+              <button onclick="removeFromCart(${item.id})">移除</button>
+            `;
+        cartItemsDiv.appendChild(cartItemDiv);
+      });
+      updateTotal();
+    }
+
+    // 添加商品到购物车
+    function addToCart(productId, productName, price, image) {
+      if (cart.length >= 3) {
+        alert('购物车最多只能添加三种不同的食物！');
+        return;
+      }
+      
+      const product = products.find(p => p.id === productId);
+      const existingItem = cart.find(item => item.id === productId);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ id: productId, name: productName, price: price, image: image, quantity: 1 });
+      }
+      renderCartItems();
+    }
+
+    // 从购物车移除商品
+    function removeFromCart(productId) {
+      const index = cart.findIndex(item => item.id === productId);
+      if (index > -1) {
+        cart.splice(index, 1);
+        renderCartItems();
+      }
+    }
+
+    // 更新购物车总价
+    function updateTotal() {
+      const totalAmountSpan = document.getElementById('total-amount');
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+      });
+      totalAmountSpan.textContent = total.toFixed(2);
+    }
+
+    // 结算购物车
+    function checkout() {
+      if (cart.length === 0) {
+        alert('购物车为空！');
+        return;
+      }
+      // 这里可以添加实际的结算逻辑，如与后端交互等
+      alert('结算成功，共' + cart.length + '件商品，总价：$' + document.getElementById('total-amount').textContent);
+      cart = [];
+      renderCartItems();
+    }
+  </script>
+
+  <!-- 丰富菜品 郭瑾涵-->
+
+
+  <div class="middder">
+    <div>
+      <h1>肉食精选</h1>
+      <div class="classList">
+        <div class="list">
+          <img src="./图片/牛肉暖锅.png" alt="牛肉暖锅">
+          <h4 style="background-color: white;">牛肉暖锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/牛肉炖萝卜.png" alt="牛肉炖萝卜">
+          <h4>牛肉炖萝卜</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/番茄牛腩.png" alt="番茄牛腩">
+          <h4>番茄牛腩</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊排暖锅.png" alt="羊排暖锅">
+          <h4>羊排暖锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊肉炖萝卜.png" alt="羊肉炖萝卜">
+          <h4>羊肉炖萝卜</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊肉粉丝煲.png" alt="羊肉粉丝煲">
+          <h4>羊肉粉丝煲</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/麻辣香锅.png" alt="麻辣香锅">
+          <h4>麻辣香锅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/莲藕玉米排骨汤.png" alt="莲藕玉米��骨汤">
+          <h4>莲藕玉米排骨汤</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/可乐鸡翅.png" alt="可乐鸡翅">
+          <h4>可乐鸡翅</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/土豆炒肉丝.png" alt="土豆炒肉丝">
+          <h4>土豆炒肉丝</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/彩椒炒猪肝.png" alt="彩椒炒猪肝">
+          <h4>彩椒炒猪肝</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/炒辣子鸡.png" alt="炒辣子鸡">
+          <h4>炒辣子鸡</h4>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1>主食精选</h1>
+      <div class="classList">
+        <div class="list">
+          <img src="./图片/番茄牛肉焗饭.png" alt="番茄牛肉焗饭">
+          <h4>番茄牛肉焗饭</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/素馅蒸饺.png" alt="素馅蒸饺">
+          <h4>素馅蒸饺</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/红烧牛肉面 .png" alt="红烧牛肉面">
+          <h4>红烧牛肉面</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/羊肉焖饭.png" alt="羊肉焖饭">
+          <h4>羊肉焖饭</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/虾仁鸡蛋饺子.png" alt="虾仁鸡蛋饺子">
+          <h4>虾仁鸡蛋饺子</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/香菇肉丝卤面条.png" alt="香菇肉丝卤面条">
+          <h4>香菇肉丝卤面条</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/香菇青菜包.png" alt="香菇青菜包">
+          <h4>香菇青菜包</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/香葱鸡蛋饼.png" alt="香葱鸡蛋饼">
+          <h4>香葱鸡蛋饼</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/咖喱鸡肉盖饭.png" alt="咖喱鸡肉盖饭">
+          <h4>咖喱鸡肉盖饭</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/小米山药粥.png" alt="小米山药粥">
+          <h4>小米山药粥</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/砂锅海鲜粥.png" alt="砂锅海鲜粥">
+          <h4>砂锅海鲜粥</h4>
+        </div>
+        <div class="list">
+          <img src="./图片/金针菇蒸猪肉卷.png" alt="金针菇蒸猪肉卷">
+          <h4>金针菇蒸猪肉卷</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 饮食百科 -->
+  <!-- 饮食百科——王润姿，郭瑾涵 -->
+  <div class="container">
+    <h1>饮食百科</h1>
+    <div class="category-box">
+      <div class="category">
+        <h2>烹饪技巧</h2>
+        <img src="./图片/饮食百科.jpg" alt="Cooking Image">
+        <ul>
+          <li>无骨鸡爪的制作方法</li>
+          <li>详解4个对鸡肉营养认识的误区</li>
+          <li>鸡蛋怎么煮好吃</li>
+          <li>如何快速清洗葡萄</li>
+          <li>让老北京水爆肚好吃的关键技巧</li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>烘焙教程</h2>
+        <img src="./图片/饮食百科 (2).jpg" alt="Baking Image">
+        <ul>
+          <li>如何制作巧克力转印纸</li>
+          <li>香酥泡芙的烘焙技巧都有那些？</li>
+          <li>酥的掉渣的黄油曲奇怎么做？</li>
+          <li>蛋糕温度和时间的换算</li>
+          <li>低���软曲奇加工工艺</li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>其他百科</h2>
+        <img src="./图片/饮食百科 (3).jpg" alt="Other Image">
+        <ul>
+          <li>精心挑选 五款孕妇早餐食谱</li>
+          <li>秋季养生，记得喝养生汤</li>
+          <li>���减肥,试试这7款粥</li>
+          <li>饮食界，五大养生法宝</li>
+          <li>总是感觉饿了怎么办？十种方法教会你</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+  <div style="height: 525px;"></div>
+
+
+  <!-- 底部区域——李宗旭 -->
+  <footer>
+    <div class="footer-links">
+      关于我们
+      联系我们
+      隐私政策
+      使用条款
+    </div>
+    <div class="contact-info">
+      联系电话:123-456-7890
+      电子邮箱:info@example.com
+    </div>
+    <p>&copy;美食的奇妙世界。保留所有权利。</p>
+  </footer>
+</body>
+
+</html>

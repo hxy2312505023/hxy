@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheetcopy.css">
+  <link rel="stylesheet" href="./js/swiper.min.css">
+  <title>食材大全</title>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 460px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .category {
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: white;
+      color: black;
+      border-top: 1px solid #555;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      /* border-top: 1px solid #555; */
+      padding-top: 50px;
+    }
+  </style>
+  <!-- 头部区域 ——李一佳-->
+</head>
+
+<body>
+  <header>
+    <h1>食材大全</h1>
+  </header>
+  <nav class="navbar">
+    <div class="logo">
+      <img style="width: 70px; height: 70px;" src="./图片/汉堡.jpg" alt="菜谱图标">
+      <span>食材大全</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="setActive(this)">时令与热门</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">肉禽类</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">水产品类</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">蔬菜类</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">果品类</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">米面豆乳</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">调味品</a></li>
+      <li><a href="#" class="active" onclick="setActive(this)">药品及其他</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <!-- 食材大全 ——李一佳-->
+  <table>
+    <tr>
+      <th colspan="7">时令与热门</th>
+    </tr>
+    <tr>
+      <td>鸡肉</td>
+      <td>鸡翅</td>
+      <td>鸡蛋</td>
+      <td>牛肉</td>
+      <td>猪肉</td>
+      <td>排骨</td>
+      <td>小番茄</td>
+    </tr>
+    <tr>
+      <td>小龙虾</td>
+      <td>皮皮虾</td>
+      <td>螃蟹</td>
+      <td>虾</td>
+      <td>扇贝</td>
+      <td>生蚝</td>
+      <td>鲍鱼</td>
+    </tr>
+    <tr>
+      <td>黄瓜</td>
+      <td>茄子</td>
+      <td>西红柿</td>
+      <td>土豆</td>
+      <td>黑木耳</td>
+      <td>秋葵</td>
+      <td>洋葱</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">肉禽类</th>
+    </tr>
+    <tr>
+      <td>猪肉</td>
+      <td>排骨</td>
+      <td>里脊</td>
+      <td>猪蹄</td>
+      <td>五花肉</td>
+      <td>肋排</td>
+      <td>牛肉</td>
+    </tr>
+    <tr>
+      <td>牛排</td>
+      <td>腊肉</td>
+      <td>培根</td>
+      <td>香肠</td>
+      <td>鸡肉</td>
+      <td>鸡翅</td>
+      <td>鸡腿</td>
+    </tr>
+    <tr>
+      <td>乌鸡</td>
+      <td>鸭肉</td>
+      <td>乳鸽</td>
+      <td>鸡蛋</td>
+      <td>鸭蛋</td>
+      <td>鸭脖</td>
+      <td>鹅肝</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">水产品类</th>
+    </tr>
+    <tr>
+      <td>草鱼</td>
+      <td>鲤鱼</td>
+      <td>鲫鱼</td>
+      <td>带鱼</td>
+      <td>鲈鱼</td>
+      <td>黄花鱼</td>
+      <td>鳕鱼</td>
+    </tr>
+    <tr>
+      <td>鲳鱼</td>
+      <td>鳗鱼</td>
+      <td>三文鱼</td>
+      <td>胖头鱼</td>
+      <td>金枪鱼</td>
+      <td>虾</td>
+      <td>扇贝</td>
+    </tr>
+    <tr>
+      <td>鱿鱼</td>
+      <td>章鱼</td>
+      <td>鲍鱼</td>
+      <td>海参</td>
+      <td>海螺</td>
+      <td>贻贝</td>
+      <td>海带</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">蔬菜类</th>
+    </tr>
+    <tr>
+      <td>白菜</td>
+      <td>菠菜</td>
+      <td>生菜</td>
+      <td>西兰花</td>
+      <td>胡萝卜</td>
+      <td>土豆</td>
+      <td>西红柿</td>
+    </tr>
+    <tr>
+      <td>茄子</td>
+      <td>青椒</td>
+      <td>红椒</td>
+      <td>洋葱</td>
+      <td>大蒜</td>
+      <td>生姜</td>
+      <td>韭菜</td>
+    </tr>
+    <tr>
+      <td>豆角</td>
+      <td>四季豆</td>
+      <td>豌豆</td>
+      <td>玉米</td>
+      <td>南瓜</td>
+      <td>冬瓜</td>
+      <td>苦瓜</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">果品类</th>
+    </tr>
+    <tr>
+      <td>苹果</td>
+      <td>香蕉</td>
+      <td>橙子</td>
+      <td>葡萄</td>
+      <td>西瓜</td>
+      <td>芒果</td>
+      <td>草莓</td>
+    </tr>
+    <tr>
+      <td>樱桃</td>
+      <td>猕猴桃</td>
+      <td>菠萝</td>
+      <td>柠檬</td>
+      <td>梨</td>
+      <td>桃</td>
+      <td>杏</td>
+    </tr>
+    <tr>
+      <td>柿子</td>
+      <td>石榴</td>
+      <td>柚子</td>
+      <td>龙眼</td>
+      <td>荔枝</td>
+      <td>山竹</td>
+      <td>红毛丹</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">米面豆乳</th>
+    </tr>
+    <tr>
+      <td>大米</td>
+      <td>小米</td>
+      <td>糙米</td>
+      <td>糯米</td>
+      <td>小麦粉</td>
+      <td>玉米面</td>
+      <td>黄豆</td>
+    </tr>
+    <tr>
+      <td>红豆</td>
+      <td>黑豆</td>
+      <td>薏米</td>
+      <td>燕麦</td>
+      <td>荞麦</td>
+      <td>芝麻</td>
+      <td>豆腐</td>
+    </tr>
+    <tr>
+      <td>奶酪</td>
+      <td>酸奶</td>
+      <td>牛奶</td>
+      <td>羊奶</td>
+      <td>奶油</td>
+      <td>黄油</td>
+      <td>豆浆</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">调味品</th>
+    </tr>
+    <tr>
+      <td>食盐</td>
+      <td>白糖</td>
+      <td>酱油</td>
+      <td>醋</td>
+      <td>味精</td>
+      <td>鸡精</td>
+      <td>料酒</td>
+    </tr>
+    <tr>
+      <td>辣椒粉</td>
+      <td>胡椒粉</td>
+      <td>花椒</td>
+      <td>八角</td>
+      <td>桂皮</td>
+      <td>姜</td>
+      <td>蒜</td>
+    </tr>
+    <tr>
+      <td>葱</td>
+      <td>香菜</td>
+      <td>酵母</td>
+      <td>小苏打</td>
+      <td>番茄酱</td>
+      <td>沙拉酱</td>
+      <td>芥末</td>
+    </tr>
+    <tr>
+      <th colspan="7" class="category">药品及其他</th>
+    </tr>
+    <tr>
+      <td>人参</td>
+      <td>枸杞</td>
+      <td>黄芪</td>
+      <td>当归</td>
+      <td>金银花</td>
+      <td>菊花</td>
+      <td>薄荷</td>
+    </tr>
+    <tr>
+      <td>生姜</td>
+      <td>蜂蜜</td>
+      <td>柠檬</td>
+      <td>绿茶</td>
+      <td>大蒜</td>
+      <td>坚果</td>
+      <td>全谷物</td>
+    </tr>
+    <tr>
+      <td>蜂胶</td>
+      <td>鱼油</td>
+      <td>蛋白粉</td>
+      <td>维生素</td>
+      <td>螺旋藻</td>
+      <td>益生菌</td>
+      <td>胶原蛋白</td>
+    </tr>
+  </table>
+  <div style="height: 30px;"></div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>关于我们</h3>
+        <p>我们是一个专注于美食的平台，致力于为用户提供丰富多样且独具匠心的美食体验。</p>
+      </div>
+      <div class="footer-section links">
+        <h3>快速链接</h3>
+        <ul>
+          <li><a href="#">首页</a></li>
+          <li><a href="#">产品</a></li>
+          <li><a href="#">服务</a></li>
+          <li><a href="#">博客</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>联系我们</h3>
+        <p>地址：[三亚学院盛宝金融科技商学院]<br>
+          电话：[12345678901]<br>
+          邮箱：[12345678901@qq.com]
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 [美食大全]. 版权所有。</p>
+      </div>
+  </footer>
+
+</body>
+
+</html>

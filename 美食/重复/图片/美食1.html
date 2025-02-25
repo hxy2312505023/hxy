@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食世界</title>
+    <style>
+        /* 通用样式 */
+        body {
+            margin: 0 auto;
+            width: 80%;
+            height: 80%;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* 头部区域样式  负责：惠星宇*/
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-image: url("./图片/治愈系插画壁纸｜饱餐一顿｜平板壁纸_1_喵喵喵_来自小红书网页版.jpg");
+            /* 为了让内部元素相对header定位，方便布局 */
+            overflow: hidden;
+            /* 隐藏超出header部分的图片 */
+        }
+
+        header h1 {
+            color: #d35400;
+            font-size: 32px;
+            margin: 0;
+            position: relative;
+            /* 让标题相对header定位，可设置层级等 */
+            z-index: 2;
+            /* 确保标题在图片上层显示 */
+        }
+
+        header p {
+            color: #555;
+            font-size: 18px;
+            margin-top: 10px;
+            position: relative;
+            /* 同理，让段落文字相对header定位 */
+            z-index: 2;
+            /* 确保文字在图片上层显示 */
+        }
+
+        /* 修改下拉菜单相关样式 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 菜单导航区域样式  负责：袁冶   */
+        /* 整体导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 网站logo样式 */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+        }
+
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* 导航链接样式 */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            padding: 10px 15px;
+        }
+
+        .nav-links.active {
+            background-color: orange;
+            color: white;
+        }
+
+        /* 当鼠标悬停在菜单项上时改变背景色 */
+        .nav-links li a:hover {
+            background-color: #fee093;
+        }
+
+        /* 当鼠标悬停在下拉菜单项上时同样改变背景色 */
+        .dropdown-content ul li a:hover {
+            background-color: #fee093;
+        }
+
+        /* 下拉菜单相关样式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropbtn span.arrow-down {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-content ul li {
+            margin: 0;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 搜索框和按钮样式 */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* 用户操作按钮样式 */
+        .user-actions button {
+            margin-left: 10px;
+            padding: 5px 15px;
+            border: none;
+            background-color: orange;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        /* 内容区域 */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .box {
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 150px;
+            background-color: #ccc;
+            flex-wrap: wrap;
+            /* 允许子元素换行 */
+            gap: 10px;
+            /* 子元素之间的间距 */
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            flex: 1 1 calc(20% - 10px);
+            /* 每个盒子占据 20% 的宽度，减去间距 */
+            min-width: 250px;
+            /* 最小宽度 */
+            background-color: #fff;
+            /* 背景颜色 */
+            border: 1px solid #ccc;
+            /* 边框 */
+            padding: 10px;
+            /* 内边距 */
+            box-sizing: border-box;
+            /* 包含边框和内边距在宽度内 */
+        }
+
+        .chanbox {
+            width: 1500px;
+            height: 200px;
+            border: 1px solid white;
+            padding: 10px;
+            box-sizing: border-box;
+            float: right;
+        }
+
+        /* 图片轮播 */
+        .right {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            /* 根据实际需求调整高度 */
+        }
+
+        .right img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 960px;
+            height: 440px;
+            opacity: 0;
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            
+        }
+
+        .right img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .right img:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .right img:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        .right img:nth-child(4) {
+            animation-delay: 15s;
+        }
+
+        .right img:nth-child(5) {
+            animation-delay: 20s;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部区域 ——惠星宇-->
+    <header>
+        <h1>欢迎来到美食的奇妙世界</h1>
+        <p>您将在盛宝金融科技商学院美食城开启一场美食之旅</p>
+    </header>
+    <!-- 菜单导航区域 ——袁冶-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./图片/7482945896bdcf34e1c2f42b3785cde.png" alt="美食世界">
+            <span>美食世界</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" onclick="setActive(this)">首页</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">菜谱 <span class="arrow-down">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="recipe.html" onclick="navigate(this)">家常菜</a></li>
+                        <li><a href="recipe.html" onclick="navigate(this)">热菜</a></li>
+                        <li><a href="recipe.html" onclick="navigate(this)">凉菜</a></li>
+                        <li><a href="recipe.html" onclick="navigate(this)">主食</a></li>
+                        <li><a href="recipe.html" onclick="navigate(this)">粥</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown(this)">
+                <a href="#" class="dropbtn">中国味道 <span class="arrow-down">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#" onclick="navigate(this)">川菜</a></li>
+                        <li><a href="#" onclick="navigate(this)">粤菜</a></li>
+                        <li><a href="#" onclick="navigate(this)">东北菜</a></li>
+                        <li><a href="#" onclick="navigate(this)">湘菜</a></li>
+                        <li><a href="#" onclick="navigate(this)">徽菜</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown(this)">
+                <a href="#" class="dropbtn">饮食健康 <span class="arrow-down">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#" onclick="navigate(this)">营养搭配</a></li>
+                        <li><a href="#" onclick="navigate(this)">饮食禁忌</a></li>
+                        <li><a href="#" onclick="navigate(this)">健康食谱</a></li>
+                        <li><a href="#" onclick="navigate(this)">减肥饮食</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索菜谱、菜单、食材、用户">
+            <button><img src="./图片/4eb062a5a8dd1b0de63e8a3e959bc6f.png" alt="搜索"></button>
+        </div>
+        <div class="user-actions">
+            <button>发布</button>
+            <button>登录/注册</button>
+        </div>
+    </nav>
+    <script>
+        function toggleDropdown(element) {
+            var dropdownContent = element.querySelector('.dropdown-content');
+            if (dropdownContent.style.display === 'block') {
+                dropdownContent.style.display = 'none';
+            } else {
+                dropdownContent.style.display = 'block';
+            }
+        }
+
+        function setActive(element) {
+            var navLinks = document.querySelectorAll('.nav-links li a.nav-link');
+            navLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        function navigate(element) {
+            window.location.href = element.href;
+        }
+    </script>
+    <!-- 内容区域 -->
+    <!-- 内容区域 -->
+    <div class="main-container">
+        <div class="box">
+            <div class="box1">
+                <div class="pic">
+                    <img src="./图片/1.png" alt="菜谱大全图标">
+                    <span>菜谱大全</span>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="pic">
+                    <img src="./图片/2.png" alt="家常菜图标">
+                    <span>家常菜</span>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="pic">
+                    <img src="./图片/3.png" alt="健康饮食图标">
+                    <span>健康饮食</span>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="pic">
+                    <img src="./图片/4.png" alt="母婴专区图标">
+                    <span>母婴专区</span>
+                </div>
+            </div>
+            <div class="box5">
+                <div class="pic">
+                    <img src="./图片/5.png" alt="早餐食谱图标">
+                    <span>早餐食谱</span>
+                </div>
+            </div>
+        </div>
+        <div class="chanbox">
+            <div class="right">
+                <img src="./图片/11.png" alt="11">
+                <img src="./图片/22.png" alt="22">
+                <img src="./图片/33.png" alt="33">
+                <img src="./图片/44.png" alt="44">
+                <img src="./图片/55.png" alt="55">
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部区域 -->
+
+</body>
+
+</html>

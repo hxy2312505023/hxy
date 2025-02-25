@@ -1,0 +1,235 @@
+body {
+    margin: 0 auto;
+    width: 89%;
+    height: 100px;
+    font-family: 'Arial', serif;
+    background-color: rgb(247, 243, 239);
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(./图片/🌟新年_\ 共创年夜饭\ _\ 今晚年夜饭吃了什么_2_米花ac_来自小红书网页版.jpg);
+    padding: 10px 0;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    color: rgb(7, 7, 7);
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(233, 206, 206);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    background-color: white;
+}
+
+nav ul li a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 25px;
+    border: rgb(252, 249, 249) 2px solid;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: coral;
+}
+
+.user-actions button {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.mod {
+    /* display: flex; */
+    margin-top: 50px;
+}
+
+.post-10 {
+    width: 144px;
+}
+
+.middle {
+    display: flex;
+}
+
+/* 内容 */
+.main {
+    line-height: 43.75px;
+    font-size: 23px;
+    font-family: "Microsoft YaHei", "Arial", "\u5b8b\u4f53", Tahoma, Geneva, sans-serif;
+    color: #333;
+}
+
+/* p {
+    line-height: 1.75px;
+} */
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    color: #004191;
+}
+
+.news_list {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许子元素换行 */
+    margin-top: 4px;
+}
+
+.news_list li {
+    width: 50%;
+    /* 每个 li 占据 50% 的宽度，实现两列布局 */
+    box-sizing: border-box;
+    /* 包含内边距和边框在内的宽度计算 */
+    padding: 10px;
+    /* 可选：增加间距 */
+}
+
+.foodzixun {
+    width: 322px;
+    height: 300px;
+    border-radius: 28px;
+    /* 给图片边缘添加圆角 */
+}
+
+.wrapper .inner {
+    width: 1540px;
+    margin: 1 auto;
+    overflow: hidden
+}
+
+/* 内容 美食篇 */
+.mintitle {
+    display: flex;
+    align-items: center;
+}
+
+.mintitle .dandan {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cardjh {
+    width: 300px;
+    height: 400px;
+    line-height: 0px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* border - radius（实现圆角） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box - shadow（添加阴影） */
+    overflow: hidden;
+    /* overflow（处理图片溢出） */
+    display: inline-block;
+    /* display: inline - block（让卡片水平排列） */
+    margin: 10px;
+}
+
+.cardjh img {
+    width: 300px;
+    height: 185px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    /* 图片浮动效果 */
+}
+
+.cardjh img:hover {
+    transform: translateY(-10px);
+    /* 图片浮动效果 */
+}
+
+.cardjh h5 {
+    padding: -5px;
+    margin: 25px;
+    text-align: center;
+}
+
+.cardjh p {
+    padding: 0px 15px;
+    text-align: left;
+    line-height: 27.75px;
+    font-size: 15px;
+}
+
+.cardjh {
+    transition: transform 0.3s ease;
+    /* 卡片浮动效果 */
+}
+
+.cardjh:hover {
+    transform: translateY(-10px);
+    /* 卡片浮动效果 */
+}
+
+/* 底部——郭瑾涵 */
+.tailer {
+    /* background-color: white; */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.tail a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.pp {
+    margin: 1px;
+}
+
+.tail a:hover {
+    text-decoration: underline;
+}
+
+.rear {
+    margin-top: 1px;
+}

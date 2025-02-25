@@ -1,0 +1,611 @@
+/* 通用样式 */
+body {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    font-family: 'Arial', serif;
+    font-weight: 900;
+    /* background-color:rgb(32, 31, 31);  */
+}
+
+/* 头部区域样式  负责：惠星宇*/
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url("./图片/治愈系插画壁纸｜饱餐一顿｜平板壁纸_1_喵喵喵_来自小红书网页版.jpg");
+    /* 为了让内部元素相对header定位，方便布局 */
+    overflow: hidden;
+    /* 隐藏超出header部分的图片 */
+}
+
+header h1 {
+    text-align: center;
+    color: #d35400;
+    font-size: 34px;
+    margin: 0;
+    position: relative;
+    /* 让标题相对header定位，可设置层级等 */
+    z-index: 2;
+    /* 确保标题在图片上层显示 */
+}
+
+header p {
+    color: #555;
+    font-size: 18px;
+    margin-top: 10px;
+    position: relative;
+    /* 同理，让段落文字相对header定位 */
+    z-index: 2;
+    /* 确保文字在图片上层显示 */
+}
+
+/* 修改下拉菜单相关样式 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 菜单导航区域样式  负责：袁冶   */
+/* 整体导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 网站logo样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 0px;
+}
+
+.logo span {
+    font-size: 39px;
+    color: #333;
+}
+
+/* 导航链接样式 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.nav-links.active {
+    background-color: orange;
+    color: white;
+}
+
+/* 当鼠标悬停在菜单项上时改变背景色 */
+.nav-links li a:hover {
+    background-color: #fee093;
+}
+
+/* 当鼠标悬停在下拉菜单项上时同样改变背景色 */
+.dropdown-content ul li a:hover {
+    background-color: #fee093;
+}
+
+/* 下拉菜单相关样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn span.arrow-down {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content ul li {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 搜索框和按钮样式 */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* 用户操作按钮样式 */
+.user-actions button {
+    margin-left: 10px;
+    padding: 5px 15px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.clickable-btn {
+    background-color: #4CAF50; /* 绿色背景 */
+    color: white; /* 白色文字 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 无边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示为手型 */
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+  }
+  
+  .clickable-btn:hover {
+    background-color: #45a049; /* 悬停时的背景颜色 */
+  }
+
+/* 内容区域   郭瑾涵（主要）、李一佳*/
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+.combined-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.box {
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 430px;
+    background-color: #ccc;
+    flex-wrap: wrap;
+    /* 允许子元素换行 */
+    gap: 10px;
+    /* 子元素之间的间距 */
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+    flex: 1 1 calc(20% - 10px);
+    /* 每个盒子占据 20% 的宽度，减去间距 */
+    min-width: 250px;
+    /* 最小宽度 */
+    background-color: #fff;
+    /* 背景颜色 */
+    border: 1px solid #ccc;
+    /* 边框 */
+    padding: 10px;
+    /* 内边距 */
+    box-sizing: border-box;
+    /* 包含边框和内边距在宽度内 */
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover {
+    background-color: #fee093;
+    /* 鼠标悬停时改变背景颜色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* 添加阴影效果 */
+    color: orange;
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+
+}
+
+.chanbox {
+    width: 959px;
+    height: 430px;
+    /* border: 1px solid white; */
+    /* padding: 5px; */
+    box-sizing: border-box;
+    float: right;
+}
+
+/* 图片轮播 */
+/* .right {
+    position: relative;
+    width: 961px;
+    height: 430px;
+}
+.right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 957px;
+    height:430px;
+    opacity: 0;
+    animation: slideShow 5s ease-in-out infinite;
+
+}
+
+.right img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.right img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.right img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.right img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.right img:nth-child(5) {
+    animation-delay: 12s;
+}
+
+@keyframes slideShow {
+    0%,
+    18% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    82%,
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+} */
+
+/* 特色美食区域样式 */
+/* .recipe-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    background-color: #fff;
+    border-top: 3px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.recipe-card {
+    width: calc(33.33% - 20px);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+} */
+.recipe-list {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 40px;
+    background-color: #fff;
+    border-top: 3px solid;
+    flex-wrap: wrap;
+    /* margin: 20px; */
+  }
+
+.recipe-card {
+    width: calc(33.333% - 20px);   /*  每个卡片占据三分之一的宽度，减去间距  */
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition:  0.3s linear;
+}
+
+.recipe-card img:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card h3 {
+    margin-top: 10px;
+}
+
+.recipe-card p {
+    color: red;
+    margin-top: 5px;
+}
+
+/* 购物车样式 */
+.cart {
+    width: 485px;
+    margin-top: 12px;
+    margin-left: 11px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 69px;
+    height: 422px;
+    border-radius: 10px;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item span {
+    flex-grow: 1;
+}
+
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cart button {
+    display: block;
+    width: 37%;
+    padding: 10px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.gouwuche {
+    text-align: center;
+}
+/* 丰富菜品 */
+  /* h1 {
+      margin-bottom: 20px;
+  } */
+
+  /* 使用 Flexbox 布局使菜品卡片排列整齐 */
+  .classList {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 60px;
+    /* width:200px;
+    height: 200px; */
+}
+
+.list {
+    width: 200px;
+    /* 设置卡片宽度 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+}
+
+.list img {
+    width: 100%;
+    height: auto;
+    transition: linear 0.3s; /* 背景颜色过渡效果 */
+}
+
+.list img:hover {
+    transform: scale(1.1);
+}
+
+.list h4 {
+    margin: 10px;
+    /* padding-bottom: 10px; */
+}
+
+.foodList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.list-food {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+}
+
+.list-food img {
+    width: 100%;
+    height: auto;
+}
+
+.list-food img:hover {
+    transform: scale(1.1);
+}
+
+.list-food h4 {
+    margin: 10px;
+}
+
+/* 饮食百科 */
+/* 饮食百科 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: left;
+    margin: 30px 0 20px 0;
+  }
+  
+  .category-box {
+    display: flex;
+    justify-content: space-between;
+    height: 33px;
+  }
+  
+  .category {
+    width: 424px;
+    height: 411px;
+    margin-bottom: 10px;
+    border: 2px  solid    #ccc;   /* 为每个分类框添加边框 */
+    position: relative; /* 为了让标题和列表在图片上定位 */
+  }
+  
+  h2 {
+    color: white;
+    margin-bottom: 200px;
+    /* border: 3px solid black; */
+    position: absolute; /* 绝对定位标题 */
+    top: 0;
+    left: 0;
+    height: 180px;
+    line-height: 180px;
+    width: 100%;
+    text-align: center;
+    background-color:  rgba(0, 0, 0, 0.5) /* 黑色，50% 透明度 */; /* 为标题添加半透明背景 */
+  }
+  
+  .category img {
+    width: 420px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    /* list-style: none; */
+    /* position: absolute;  */
+    /* bottom: -6px; */
+    left: 5px;
+    /* width: 100%; */
+    padding: 20px 60px;
+    background-color: rgba(255, 255, 255, 0.7); /* 为列表添加半透明背景 */
+  }
+  
+  li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+  }
+
+/* 底部区域 */
+footer {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+

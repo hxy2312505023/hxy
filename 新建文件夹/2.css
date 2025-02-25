@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* 导航栏内边距 */
+    flex: 1;
+}
+
+.logo {
+    position: relative; /* 相对定位以便绝对定位文本 */
+}
+
+.logo img {
+    width: 150px; /* 设置图片宽度 */
+    height: auto; /* 自动高度 */
+}
+
+.logo-text {
+    position: absolute; /* 绝对定位以覆盖在图片上 */
+    bottom: 33px; /* 从底部的距离 */
+    left: 45px; /* 从左边的距离 */
+    color: white; /* 文本颜色 */
+    font-size: 16px; /* 文本大小 */
+}
+
+.logo-text1{
+    position: absolute; /* 绝对定位以覆盖在图片上 */
+    bottom: 33px; /* 从底部的距离 */
+    left: 200px; /* 从左边的距离 */
+    color: white; /* 文本颜色 */
+    font-size: 16px; /* 文本大小 */
+}
+
+.logo-text2{
+    position: absolute; /* 绝对定位以覆盖在图片上 */
+    bottom: 33px; /* 从底部的距离 */
+    left: 350px; /* 从左边的距离 */
+    color: white; /* 文本颜色 */
+    font-size: 16px; /* 文本大小 */
+}
+
+.logo-text3{
+    position: absolute; /* 绝对定位以覆盖在图片上 */
+    bottom: 33px; /* 从底部的距离 */
+    left: 505px; /* 从左边的距离 */
+    color: white; /* 文本颜色 */
+    font-size: 16px; /* 文本大小 */
+}
+
+.nav-links {
+    list-style: none; /* 去掉列表项的默认样式 */
+    margin-left: auto; /* 将链接项推到右边 */
+}
+
+.nav-links li {
+    display: inline; /* 使链接项在同一行 */
+    margin: 0 30px; /* 设置链接项之间的间距 */
+}
+
+.nav-links a {
+    color: white; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
